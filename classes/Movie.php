@@ -17,4 +17,12 @@ class Movie
         $this->genre = $_genre;
         $this->classification = $_classification;
     }
+
+    //function if is visible for all ages
+    function isVisible()
+    {
+        if (empty($this->classification)) {
+            $this->classification = "T";
+        }
+    }
 }
