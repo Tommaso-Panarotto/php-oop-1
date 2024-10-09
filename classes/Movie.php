@@ -5,16 +5,16 @@ class Movie
 
     //instance variables
     public $title;
-    public $genre;
+    public $genres;
     public $description;
     public $classification;
 
     //constructor
-    function __construct($_title, $_description, $_genre, $_classification = 'T')
+    function __construct($_title, $_description, Genres $_genres, $_classification = 'T')
     {
         $this->title = $_title;
         $this->description = $_description;
-        $this->genre = $_genre;
+        $this->genres = $_genres;
         $this->classification = $_classification;
     }
 
