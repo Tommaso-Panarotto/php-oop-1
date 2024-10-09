@@ -15,7 +15,24 @@ require __DIR__ . "/db.php";
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="row">
+            <?php foreach ($movies as $movie) { ?>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $movie->title ?></h5>
+                            <p class="card-text"><?= $movie->description ?></p>
+                            <div>
+                                <ul><?php foreach ($movie->genres as $genre) { ?><li>ciao</li><?php } ?></ul>
+                            </div>
+                            <span><?= $movie->isVisible() ?></span>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
 </body>
 
 </html>
