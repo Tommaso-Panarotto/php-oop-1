@@ -10,7 +10,7 @@ class Movie
     public $classification;
 
     //constructor
-    function __construct($_title, $_description, $_genre, $_classification)
+    function __construct($_title, $_description, $_genre, $_classification = 'T')
     {
         $this->title = $_title;
         $this->description = $_description;
@@ -21,8 +21,10 @@ class Movie
     //function if is visible for all ages
     function isVisible()
     {
-        if ($this->classification === '') {
-            $this->classification = "T";
+        if ($this->classification !== 'T') {
+            return "è visibile per " . $this->classification;
+        } else {
+            return "è visibile per tutti";
         }
     }
 }
