@@ -21,7 +21,7 @@ class Movie
     //function if is visible for all ages
     function isVisible()
     {
-        if (empty($this->classification)) {
+        if ($this->classification === '') {
             $this->classification = "T";
         }
     }
